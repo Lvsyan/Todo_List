@@ -18,6 +18,14 @@ const Home = () => {
 		}
 	};
 
+	const handleMouseOver = () => {
+		setDisplay(true);
+	};
+
+	const handleMouseOut = () => {
+		setDisplay(false);
+	};
+
 	return (
 		<div className="back">
 			<div className="container">
@@ -35,7 +43,10 @@ const Home = () => {
 					{list.map((items, index) => {
 						return (
 							<div key={index} className="d-flex tasks">
-								<div className="shadow bas task border border-secondary ps-5">
+								<div
+									className="shadow bas task border border-secondary ps-5"
+									onMouseOver={handleMouseOver}
+									onMouseOut={handleMouseOut}>
 									{items}
 									<button
 										onClick={() => {

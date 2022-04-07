@@ -14,8 +14,7 @@ body{
     background-color: coral;
 }
 
-/*CSS display, buscar Hover, que no aparezca la X y que se enseña al pasar el raton*/
-.button:hover{
+.button{
     color: black;
     border-style: none;
     font-size: 25px;

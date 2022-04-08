@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ListaTarea from "./listaTarea.jsx";
 
 const Home = () => {
 	const [task, setTask] = useState("");
@@ -18,14 +19,6 @@ const Home = () => {
 		}
 	};
 
-	const handleMouseOver = () => {
-		setDisplay(true);
-	};
-
-	const handleMouseOut = () => {
-		setDisplay(false);
-	};
-
 	return (
 		<div className="back">
 			<div className="container">
@@ -40,30 +33,12 @@ const Home = () => {
 							setTask(e.target.value);
 						}}
 					/>
-					{list.map((items, index) => {
-						return (
-							<div key={index} className="d-flex tasks">
-								<div
-									className="shadow bas task border border-secondary ps-5"
-									onMouseOver={handleMouseOver}
-									onMouseOut={handleMouseOut}>
-									{items}
-									<button
-										onClick={() => {
-											setList(
-												list.filter(
-													(f, k) => k != index
-												)
-											);
-											console.log(list);
-										}}
-										className="button">
-										X
-									</button>
-								</div>
-							</div>
-						);
-					})}
+					<ListaTarea
+						list={list}
+						removeTask={(a) =>
+							setList(list.filter((e, i) => i != a))
+						}
+					/>
 					<div className="shadow basic counter border border-seconday ps-2">
 						{todo}
 					</div>

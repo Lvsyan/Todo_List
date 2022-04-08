@@ -1,3 +1,12 @@
+Explicación del ejercicio:
+
+- Primero he creado las constantes con el UseState para declarar los parametros que necesito
+- A partir de ahí creo una className para tener responsive el ejercicio y poder tenerlo organizado
+- Creo un input para meterle un onChange de las tasks, después un boton con un onClick del setlist y que me elimine mis tasks
+- Le cree un css para añadirle todo el estilo de la web
+- Cree dos constantes para ponerle hover y que funcione en condiciones el eliminar las tasks
+
+
 # Hello World with React boilerplate
 <p>
   <a href="https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git"><img src="https://raw.githubusercontent.com/4GeeksAcademy/react-hello/master/open-in-gitpod.svg?sanitize=true" />

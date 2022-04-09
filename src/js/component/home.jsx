@@ -12,6 +12,7 @@ const Home = () => {
 		todo = list.length + " " + "Items left";
 	}
 
+	// ...element = Spread operator
 	const handleKeyDown = (event) => {
 		if (event.key === "Enter") {
 			setList([...list, task]);
